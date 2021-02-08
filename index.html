@@ -19,7 +19,11 @@
   </header>
   <main>
     <div class="container" data-view="entry-form">
+      <h1>
+        New Entry
+      </h1>
       <div class="row">
+        <img class="column-half" src="images/placeholder-image-square.jpg" alt="placeholder">
         <form>
           <div class="column-half">
             <label>
@@ -33,14 +37,16 @@
               <input name="title-entry" placeholder="Enter Title">
             </label>
           </div>
-          <div class="column-full">
-            <label>
-              Notes
-              <textarea name="notes-message" rows="5" cols="10" placeholder="Enter your notes here">
-              </textarea>
-            </label>
-          </div>
         </form>
+      </div>
+      <div class="row">
+        <div class="column-full">
+          <label>
+            Notes <br>
+            <textarea name="notes-message" rows="10" cols="70" placeholder="Enter your notes here">
+            </textarea>
+          </label>
+        </div>
       </div>
     </div>
   </main>
