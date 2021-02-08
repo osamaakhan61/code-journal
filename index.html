@@ -18,22 +18,30 @@
   <header>
   </header>
   <main>
-    <div data-view="entry-form">
-      <form>
-        <label>
-          Image URL
-          <input name="image-URL" placeholder="Enter URL">
-        </label>
-        <label>
-          Title
-          <input name="title-entry" placeholder="Enter Title">
-        </label>
-        <label>
-          Notes
-          <textarea name="notes-message" rows="5" cols="10" placeholder="Enter your notes here">
-          </textarea>
-        </label>
-      </form>
+    <div class="container" data-view="entry-form">
+      <div class="row">
+        <form>
+          <div class="column-half">
+            <label>
+              Image URL
+              <input name="image-URL" placeholder="Enter URL">
+            </label>
+          </div>
+          <div class="column-half">
+            <label>
+              Title
+              <input name="title-entry" placeholder="Enter Title">
+            </label>
+          </div>
+          <div class="column-full">
+            <label>
+              Notes
+              <textarea name="notes-message" rows="5" cols="10" placeholder="Enter your notes here">
+              </textarea>
+            </label>
+          </div>
+        </form>
+      </div>
     </div>
   </main>
   <script src="js/data.js"></script>
