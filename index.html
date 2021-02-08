@@ -15,41 +15,45 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-  </header>
-  <main>
-    <div class="container" data-view="entry-form">
-      <h1>
-        New Entry
-      </h1>
-      <form>
-        <div class="row">
-          <img class="column-half" src="images/placeholder-image-square.jpg" alt="placeholder">
-          <div class="column-half">
-            <label>
-              Image URL
-              <input name="image-URL" placeholder="Enter URL" required="true">
-            </label>
-            <label>
-              Title
-              <input name="title-entry" placeholder="Enter Title" required="true">
-            </label>
+  <div class="container">
+    <header>
+      <div class="row">
+        <h1>
+          New Entry
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div data-view="entry-form">
+        <form>
+          <div class="row">
+            <img class="column-half" src="images/placeholder-image-square.jpg" alt="placeholder">
+            <div class="column-half">
+              <label>
+                Image URL
+                <input name="image-URL" placeholder="Enter URL" required="true">
+              </label>
+              <label>
+                Title
+                <input name="title-entry" placeholder="Enter Title" required="true">
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="column-full">
-            <label>
-              Notes <br>
-              <textarea name="notes-message" rows="10" cols="70" placeholder="Enter your notes here" required="true">
-                    </textarea>
-            </label>
-            <br>
-            <button type="button">Save</button>
+          <div class="row">
+            <div class="column-full">
+              <label>
+                Notes <br>
+                <textarea name="notes-message" rows="10" cols="70" placeholder="Enter your notes here" required="true">
+                        </textarea>
+              </label>
+              <br>
+              <button type="button">Save</button>
+            </div>
           </div>
-        </div>
-      </form>
-    </div>
-  </main>
+        </form>
+      </div>
+    </main>
+  </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
