@@ -22,32 +22,32 @@
       <h1>
         New Entry
       </h1>
-      <div class="row">
-        <img class="column-half" src="images/placeholder-image-square.jpg" alt="placeholder">
-        <form>
+      <form>
+        <div class="row">
+          <img class="column-half" src="images/placeholder-image-square.jpg" alt="placeholder">
           <div class="column-half">
             <label>
               Image URL
-              <input name="image-URL" placeholder="Enter URL">
+              <input name="image-URL" placeholder="Enter URL" required="true">
             </label>
-          </div>
-          <div class="column-half">
             <label>
               Title
-              <input name="title-entry" placeholder="Enter Title">
+              <input name="title-entry" placeholder="Enter Title" required="true">
             </label>
           </div>
-        </form>
-      </div>
-      <div class="row">
-        <div class="column-full">
-          <label>
-            Notes <br>
-            <textarea name="notes-message" rows="10" cols="70" placeholder="Enter your notes here">
-            </textarea>
-          </label>
         </div>
-      </div>
+        <div class="row">
+          <div class="column-full">
+            <label>
+              Notes <br>
+              <textarea name="notes-message" rows="10" cols="70" placeholder="Enter your notes here" required="true">
+                    </textarea>
+            </label>
+            <br>
+            <button type="button">Save</button>
+          </div>
+        </div>
+      </form>
     </div>
   </main>
   <script src="js/data.js"></script>
