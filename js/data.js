@@ -6,12 +6,15 @@ var data = {
   editing: null,
   nextEntryId: 1
 };
+var previousDataJSON = localStorage.getItem('form-data-local');
+if (previousDataJSON !== null) {
+  data.entries = JSON.parse(previousDataJSON);
+}
 
 var $formButton = document.querySelector('#submitForm');
 
 $formButton.addEventListener('submit', function (event) {
   event.preventDefault();
-  // eslint-disable-next-line no-unused-vars
   var formInputs = {
     imageURL: $formButton.elements.URL.value,
     title: $formButton.elements.title.value,
@@ -27,3 +30,8 @@ $formButton.addEventListener('submit', function (event) {
 }
 )
 ;
+
+window.addEventListener('beforeunload', function (event) {
+  var dataJSON = JSON.stringify(data.entries);
+  localStorage.setItem('form-data-local', dataJSON);
+});
