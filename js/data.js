@@ -21,6 +21,9 @@ $formButton.addEventListener('submit', function (event) {
   data.nextEntryId++;
 
   data.entries = formInputs;
+  var $imageReset = document.getElementById('image');
+  $imageReset.setAttribute('src', 'images/placeholder-image-square.jpg');
+  $formButton.reset();
 }
 )
 ;
