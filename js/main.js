@@ -24,6 +24,4 @@ $formButton.addEventListener('submit', function (event) {
   var $imageReset = document.getElementById('image');
   $imageReset.setAttribute('src', 'images/placeholder-image-square.jpg');
   $formButton.reset();
-}
-)
-;
+});

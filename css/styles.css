@@ -1,9 +1,12 @@
 body {
-  background-color: rgb(36, 37, 42);
+  background-color: rgb(61, 63, 71);
 }
 
 header {
+  position: relative;
+  top: -20px;
   border-bottom: 1px solid rgb(0, 136, 169, 1);
+  background-color: rgb(36, 37, 42);
 }
 
 h1 {
@@ -15,6 +18,7 @@ h1 {
 
 h1.column-full {
   font-size: 24px;
+  padding-top: 20px;
 }
 
 label {
@@ -45,7 +49,10 @@ button:hover {
   padding: 6px;
 }
 
+.column-full,
+.column-half,
 input,
 textarea {
   margin-top: 2%;
+  margin-bottom: 2%;
 }
