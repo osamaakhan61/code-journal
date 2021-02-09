@@ -10,13 +10,15 @@ var data = {
 var $formButton = document.querySelector('#submitForm');
 
 $formButton.addEventListener('submit', function (event) {
+  event.preventDefault();
+  // eslint-disable-next-line no-unused-vars
   var formInputs = {
     imageURL: $formButton.elements.URL.value,
     title: $formButton.elements.title.value,
-    notes: $formButton.elements.notes.value
+    notes: $formButton.elements.notes.value,
+    nextEntryId: data.nextEntryId
   };
-  // eslint-disable-next-line no-console
-  console.log(formInputs);
+
 }
 )
 ;
