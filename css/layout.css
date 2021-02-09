@@ -45,5 +45,5 @@ textarea {
 }
 
 button {
-  justify-content: flex-end;
+  float: right;
 }
