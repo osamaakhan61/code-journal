@@ -8,7 +8,7 @@ var data = {
 };
 var previousDataJSON = localStorage.getItem('form-data-local');
 if (previousDataJSON !== null) {
-  data.entries = JSON.parse(previousDataJSON);
+  data = JSON.parse(previousDataJSON);
 }
 
 var $formButton = document.querySelector('#submitForm');
@@ -32,6 +32,6 @@ $formButton.addEventListener('submit', function (event) {
 ;
 
 window.addEventListener('beforeunload', function (event) {
-  var dataJSON = JSON.stringify(data.entries);
+  var dataJSON = JSON.stringify(data);
   localStorage.setItem('form-data-local', dataJSON);
 });
