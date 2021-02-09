@@ -14,7 +14,9 @@
 }
 
 .column-full,
-.column-half {
+.column-half,
+input,
+textarea {
   width: 100%;
 }
 

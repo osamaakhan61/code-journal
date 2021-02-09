@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Journal</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.ico">
   <link
     rel="stylesheet"
@@ -15,15 +20,51 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-  </header>
-  <main>
-    <div data-view="entry-form">
-      <form>
-
-      </form>
-    </div>
-  </main>
+    <header>
+      <div class="container">
+        <h1 class="column-full">
+          Code Journal
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div data-view="entry-form">
+          <form id="submitForm">
+            <div class="row">
+              <div class="column-full">
+                <h1>
+                  New Entry
+                </h1>
+              </div>
+            </div>
+            <div class="row">
+              <img class="column-half" id="image" src="images/placeholder-image-square.jpg" alt="placeholder">
+              <div class="column-half">
+                <label>
+                  Image URL
+                  <input class="input" type="url" name="URL" placeholder="Enter URL" required="true">
+                </label>
+                <label>
+                  Title
+                  <input class="input" name="title" placeholder="Enter Title" required="true">
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-full">
+                <label>
+                  Notes <br>
+                  <textarea class="input" name="notes" rows="10" cols="70" required="true" placeholder="Enter Notes"></textarea>
+                </label>
+                <br>
+                <button type="submit">Save</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
