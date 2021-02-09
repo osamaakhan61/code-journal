@@ -33,6 +33,7 @@ button {
   transition: all 0.3s ease 0s;
   padding: 9px 25px;
   outline: none;
+  float: right;
 }
 
 button:hover {
@@ -42,4 +43,9 @@ button:hover {
 .input {
   border-radius: 5px;
   padding: 6px;
+}
+
+input,
+textarea {
+  margin-top: 2%;
 }
