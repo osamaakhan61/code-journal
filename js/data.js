@@ -18,6 +18,7 @@ $formButton.addEventListener('submit', function (event) {
     notes: $formButton.elements.notes.value,
     nextEntryId: data.nextEntryId
   };
+  data.nextEntryId++;
 
 }
 )
