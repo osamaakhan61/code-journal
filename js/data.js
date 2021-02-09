@@ -20,6 +20,7 @@ $formButton.addEventListener('submit', function (event) {
   };
   data.nextEntryId++;
 
+  data.entries = formInputs;
 }
 )
 ;
