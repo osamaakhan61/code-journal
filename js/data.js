@@ -7,10 +7,16 @@ var data = {
   nextEntryId: 1
 };
 
-var $submitButton = document.querySelector('button');
+var $formButton = document.querySelector('#submitForm');
 
-$submitButton.addEventListener('submit', function (event) {
-  var formJSON = JSON.stringify(data);
-  localStorage.setItem('form-local-storage', formJSON);
-})
+$formButton.addEventListener('submit', function (event) {
+  var formInputs = {
+    imageURL: $formButton.elements.URL.value,
+    title: $formButton.elements.title.value,
+    notes: $formButton.elements.notes.value
+  };
+  // eslint-disable-next-line no-console
+  console.log(formInputs);
+}
+)
 ;
