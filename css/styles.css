@@ -67,14 +67,17 @@ h2 {
   margin-top: 2px;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 > a {
   padding-left: 20px;
   font-size: 24px;
-  text-decoration: none;
   transition: all 0.3s ease 0s;
 }
 
-h1 > a:visited {
+a:visited {
   color: white;
 }
 
