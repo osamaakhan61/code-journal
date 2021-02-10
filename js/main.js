@@ -24,6 +24,10 @@ $formButton.addEventListener('submit', function (event) {
   var $imageReset = document.getElementById('image');
   $imageReset.setAttribute('src', 'images/placeholder-image-square.jpg');
   $formButton.reset();
+
+  $divForm.setAttribute('class', 'hidden');
+  $divEntries.removeAttribute('class');
+  document.reload(true);
 });
 
 var currentUL = document.querySelector('ul');
@@ -59,3 +63,20 @@ for (var i = 0; i < data.entries.length; i++) {
   window.addEventListener('DOMContentLoaded', getEntry(data));
   currentUL.appendChild(getEntry(data));
 }
+
+var $entryLink = document.querySelector('.entry-page');
+var $formLink = document.querySelector('.new-form');
+var $divForm = document.querySelector("div [data-view='entry-form'");
+var $divEntries = document.querySelector("div [data-view='entries'");
+
+$entryLink.addEventListener('click', function (event) {
+  $divForm.setAttribute('class', 'hidden');
+  $divEntries.removeAttribute('class');
+}
+);
+
+$formLink.addEventListener('click', function (event) {
+  $divEntries.setAttribute('class', 'hidden');
+  $divForm.removeAttribute('class');
+}
+);
