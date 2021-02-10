@@ -25,3 +25,37 @@ $formButton.addEventListener('submit', function (event) {
   $imageReset.setAttribute('src', 'images/placeholder-image-square.jpg');
   $formButton.reset();
 });
+
+var currentUL = document.querySelector('ul');
+
+function getEntry(entry) {
+  var newLi = document.createElement('li');
+  var newIMG = document.createElement('img');
+  var newDIV = document.createElement('div');
+  var newHead = document.createElement('h2');
+  var newPara = document.createElement('p');
+
+  newIMG.setAttribute('class', 'column-half');
+  newDIV.setAttribute('class', 'column-half');
+
+  newIMG.setAttribute('src', data.entries[i].imageURL);
+
+  var newHeadContent = document.createTextNode(data.entries[i].title);
+  var newParaContent = document.createTextNode(data.entries[i].notes);
+
+  newHead.appendChild(newHeadContent);
+  newPara.appendChild(newParaContent);
+
+  newDIV.appendChild(newHead);
+  newDIV.appendChild(newPara);
+
+  newLi.appendChild(newIMG);
+  newLi.appendChild(newDIV);
+
+  return newLi;
+}
+
+for (var i = 0; i < data.entries.length; i++) {
+  window.addEventListener('DOMContentLoaded', getEntry(data));
+  currentUL.appendChild(getEntry(data));
+}

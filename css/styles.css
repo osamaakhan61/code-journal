@@ -60,3 +60,7 @@ textarea {
 .entry-list {
   list-style: none;
 }
+
+h2 {
+  margin-top: 2px;
+}
