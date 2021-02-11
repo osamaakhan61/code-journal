@@ -21,6 +21,7 @@ $photoURL.addEventListener('input', function (event) {
 var $formButton = document.querySelector('#submitForm');
 
 $formButton.addEventListener('submit', function (event) {
+  event.preventDefault();
   var formInputs = {
     imageURL: $formButton.elements.URL.value,
     title: $formButton.elements.title.value,
@@ -51,10 +52,10 @@ function getEntry(entry) {
   newIMG.setAttribute('class', 'column-half');
   newDIV.setAttribute('class', 'column-half');
 
-  newIMG.setAttribute('src', data.entries[i].imageURL);
+  newIMG.setAttribute('src', entry.imageURL);
 
-  var newHeadContent = document.createTextNode(data.entries[i].title);
-  var newParaContent = document.createTextNode(data.entries[i].notes);
+  var newHeadContent = document.createTextNode(entry.title);
+  var newParaContent = document.createTextNode(entry.notes);
 
   newHead.appendChild(newHeadContent);
   newPara.appendChild(newParaContent);
@@ -68,10 +69,11 @@ function getEntry(entry) {
   return newLi;
 }
 
-for (var i = 0; i < data.entries.length; i++) {
-  document.addEventListener('DOMContentLoaded', getEntry(data));
-  currentUL.appendChild(getEntry(data));
-}
+window.addEventListener('DOMContentLoaded', function (event) {
+  for (var i = 0; i < data.entries.length; i++) {
+    currentUL.append(getEntry(data.entries[i]));
+  }
+});
 
 $entryLink.addEventListener('click', function (event) {
   $divForm.setAttribute('class', 'hidden');
