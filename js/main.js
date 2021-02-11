@@ -21,7 +21,6 @@ $photoURL.addEventListener('input', function (event) {
 var $formButton = document.querySelector('#submitForm');
 
 $formButton.addEventListener('submit', function (event) {
-  event.preventDefault();
   var formInputs = {
     imageURL: $formButton.elements.URL.value,
     title: $formButton.elements.title.value,
@@ -38,7 +37,6 @@ $formButton.addEventListener('submit', function (event) {
   $divForm.setAttribute('class', 'hidden');
   $divEntries.removeAttribute('class');
   data.view = 'entry';
-  document.reload(true);
 });
 
 var currentUL = document.querySelector('ul');
@@ -71,7 +69,7 @@ function getEntry(entry) {
 }
 
 for (var i = 0; i < data.entries.length; i++) {
-  window.addEventListener('DOMContentLoaded', getEntry(data));
+  document.addEventListener('DOMContentLoaded', getEntry(data));
   currentUL.appendChild(getEntry(data));
 }
 
