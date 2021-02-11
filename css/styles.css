@@ -65,6 +65,8 @@ textarea {
 
 h2 {
   margin-top: 2px;
+  display: flex;
+  justify-content: space-between;
 }
 
 a {
@@ -82,6 +84,15 @@ a:visited {
 }
 
 h1 > a:hover {
+  color: rgb(0, 136, 169, 1);
+  cursor: pointer;
+}
+
+.fas {
+  transition: all 0.3s ease 0s;
+}
+
+.fas:hover {
   color: rgb(0, 136, 169, 1);
   cursor: pointer;
 }

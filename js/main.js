@@ -28,9 +28,11 @@ function getEntry(entry) {
   var newDIV = document.createElement('div');
   var newHead = document.createElement('h2');
   var newPara = document.createElement('p');
+  var editIcon = document.createElement('i');
 
   newIMG.setAttribute('class', 'column-half');
   newDIV.setAttribute('class', 'column-half');
+  editIcon.setAttribute('class', 'fas fa-edit');
 
   newIMG.setAttribute('src', entry.imageURL);
 
@@ -41,6 +43,7 @@ function getEntry(entry) {
   newPara.appendChild(newParaContent);
 
   newDIV.appendChild(newHead);
+  newHead.appendChild(editIcon);
   newDIV.appendChild(newPara);
 
   newLi.appendChild(newIMG);
