@@ -83,4 +83,5 @@ a:visited {
 
 h1 > a:hover {
   color: rgb(0, 136, 169, 1);
+  cursor: pointer;
 }

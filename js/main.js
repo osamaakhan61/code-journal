@@ -1,5 +1,15 @@
 /* global data */
 /* exported data */
+var $entryLink = document.querySelector('.entry-page');
+var $formLink = document.querySelector('.new-form');
+var $divForm = document.querySelector("div [data-view='entry-form'");
+var $divEntries = document.querySelector("div [data-view='entries'");
+
+if (data.view === 'entry-form') {
+  $divEntries.setAttribute('class', 'hidden');
+  $divForm.removeAttribute('class');
+}
+
 var $photoURL = document.querySelector("input[type='url']");
 var $picture = document.querySelector('img');
 
@@ -27,6 +37,7 @@ $formButton.addEventListener('submit', function (event) {
 
   $divForm.setAttribute('class', 'hidden');
   $divEntries.removeAttribute('class');
+  data.view = 'entry';
   document.reload(true);
 });
 
@@ -64,19 +75,15 @@ for (var i = 0; i < data.entries.length; i++) {
   currentUL.appendChild(getEntry(data));
 }
 
-var $entryLink = document.querySelector('.entry-page');
-var $formLink = document.querySelector('.new-form');
-var $divForm = document.querySelector("div [data-view='entry-form'");
-var $divEntries = document.querySelector("div [data-view='entries'");
-
 $entryLink.addEventListener('click', function (event) {
   $divForm.setAttribute('class', 'hidden');
   $divEntries.removeAttribute('class');
+  data.view = 'entry';
 }
 );
 
 $formLink.addEventListener('click', function (event) {
   $divEntries.setAttribute('class', 'hidden');
   $divForm.removeAttribute('class');
-}
-);
+  data.view = 'entry-form';
+});
