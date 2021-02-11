@@ -93,3 +93,12 @@ $formButton.addEventListener('submit', function (event) {
   data.view = 'entry';
   currentUL.prepend(getEntry(data.entries[0]));
 });
+
+currentUL.addEventListener('click', function (event) {
+  var $icon = document.querySelector('i');
+  if (event.target === $icon) {
+    $divEntries.setAttribute('class', 'hidden');
+    $divForm.removeAttribute('class');
+    data.view = 'entry-form';
+  }
+});
