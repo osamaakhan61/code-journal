@@ -49,6 +49,8 @@ function getEntry(entry) {
   newLi.appendChild(newIMG);
   newLi.appendChild(newDIV);
 
+  newLi.setAttribute('data-entry-id', entry.nextEntryId);
+
   return newLi;
 }
 
