@@ -9,7 +9,8 @@ header {
   background-color: rgb(36, 37, 42);
 }
 
-h1 {
+h1,
+h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: white;
@@ -21,7 +22,8 @@ h1.column-full {
   padding-top: 20px;
 }
 
-label {
+label,
+p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   color: white;
@@ -55,4 +57,31 @@ input,
 textarea {
   margin-top: 2%;
   margin-bottom: 2%;
+}
+
+.entry-list {
+  list-style: none;
+}
+
+h2 {
+  margin-top: 2px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 > a {
+  padding-left: 20px;
+  font-size: 24px;
+  transition: all 0.3s ease 0s;
+}
+
+a:visited {
+  color: white;
+}
+
+h1 > a:hover {
+  color: rgb(0, 136, 169, 1);
+  cursor: pointer;
 }

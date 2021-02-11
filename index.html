@@ -24,12 +24,13 @@
       <div class="container">
         <h1 class="column-full">
           Code Journal
+          <a class="entry-page">Entries</a>
         </h1>
       </div>
     </header>
     <main>
       <div class="container">
-        <div data-view="entry-form">
+        <div class="hidden" data-view="entry-form">
           <form id="submitForm">
             <div class="row">
               <div class="column-full">
@@ -58,10 +59,22 @@
                   <textarea class="input" name="notes" rows="10" cols="70" required="true" placeholder="Enter Notes"></textarea>
                 </label>
                 <br>
-                <button type="submit">Save</button>
+                <button class="submit-form" type="submit">Save</button>
               </div>
             </div>
           </form>
+        </div>
+        <div data-view="entries">
+          <div class="row">
+            <div class="column-full">
+              <h1>
+                Entries
+                <button class="new-form" type="submit"><a>New</a></button>
+              </h1>
+            </div>
+          </div>
+          <ul class="entry-list">
+          </ul>
         </div>
       </div>
     </main>

@@ -34,3 +34,15 @@ textarea {
     width: 50%;
   }
 }
+
+.entry-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.entry-list li {
+  display: flex;
+  flex-wrap: wrap;
+}
