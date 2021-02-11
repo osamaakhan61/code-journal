@@ -20,26 +20,6 @@ $photoURL.addEventListener('input', function (event) {
 
 var $formButton = document.querySelector('#submitForm');
 
-$formButton.addEventListener('submit', function (event) {
-  event.preventDefault();
-  var formInputs = {
-    imageURL: $formButton.elements.URL.value,
-    title: $formButton.elements.title.value,
-    notes: $formButton.elements.notes.value,
-    nextEntryId: data.nextEntryId
-  };
-  data.nextEntryId++;
-
-  data.entries.unshift(formInputs);
-  var $imageReset = document.getElementById('image');
-  $imageReset.setAttribute('src', 'images/placeholder-image-square.jpg');
-  $formButton.reset();
-
-  $divForm.setAttribute('class', 'hidden');
-  $divEntries.removeAttribute('class');
-  data.view = 'entry';
-});
-
 var currentUL = document.querySelector('ul');
 
 function getEntry(entry) {
@@ -86,4 +66,25 @@ $formLink.addEventListener('click', function (event) {
   $divEntries.setAttribute('class', 'hidden');
   $divForm.removeAttribute('class');
   data.view = 'entry-form';
+});
+
+$formButton.addEventListener('submit', function (event) {
+  event.preventDefault();
+  var formInputs = {
+    imageURL: $formButton.elements.URL.value,
+    title: $formButton.elements.title.value,
+    notes: $formButton.elements.notes.value,
+    nextEntryId: data.nextEntryId
+  };
+  data.nextEntryId++;
+
+  data.entries.unshift(formInputs);
+  var $imageReset = document.getElementById('image');
+  $imageReset.setAttribute('src', 'images/placeholder-image-square.jpg');
+  $formButton.reset();
+
+  $divForm.setAttribute('class', 'hidden');
+  $divEntries.removeAttribute('class');
+  data.view = 'entry';
+  currentUL.prepend(getEntry(data.entries[0]));
 });
