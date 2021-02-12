@@ -15,7 +15,7 @@ var $picture = document.querySelector('img');
 
 $photoURL.addEventListener('input', function (event) {
   var userInput = event.target.value;
-  $picture.src = userInput;
+  $picture.setAttribute('src', userInput);
 });
 
 var $formButton = document.querySelector('#submitForm');
@@ -75,6 +75,14 @@ $formLink.addEventListener('click', function (event) {
 
 $formButton.addEventListener('submit', function (event) {
   event.preventDefault();
+
+  if (data.editing !== null) {
+    data.editing.imageURL = $formButton.elements.URL.value;
+    data.editing.title = $formButton.elements.title.value;
+    data.editing.notes = $formButton.elements.notes.value;
+
+  }
+
   var formInputs = {
     imageURL: $formButton.elements.URL.value,
     title: $formButton.elements.title.value,
@@ -105,6 +113,10 @@ currentUL.addEventListener('click', function (event) {
 
       var listEdit = $listElement[j];
       data.editing = listEdit;
+
+      $formButton.elements.URL.value = data.entries[j].imageURL;
+      $formButton.elements.title.value = data.entries[j].title;
+      $formButton.elements.notes.value = data.entries[j].notes;
     }
   }
 });
